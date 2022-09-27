@@ -33,3 +33,12 @@
 //        return(`You lose! ${computerSelection} beats ${playerSelection}.`);
 //    }
 //    }
+
+
+let choices = ["rock", "paper", "scissors"];
+
+function getComputerChoice() {
+    return choices[Math.floor(Math.random() * choices.length)];
+    console.log(computerChoice);
+}
+
