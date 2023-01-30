@@ -12,7 +12,12 @@ let choices = ['rock', 'paper', 'scissors'];
 //}
 // 1/30/23 second step, add event listeners to the three buttons that call playRound with
 // the correct playerSelection every time a button is clicked (keep console.log for this step)
-let selectRock = document.getElementById('rockButton');
+const selectRock = document.getElementById('rockButton');
+selectRock.addEventListener('click', playRound);
+const selectPaper = document.getElementById('paperButton');
+selectPaper.addEventListener('click', playRound);
+const selectScissors = document.getElementById('scissorsButton');
+selectScissors.addEventListener('click', playRound);
 
 function playRound() {
     const playerSelection = getPlayerChoice();
