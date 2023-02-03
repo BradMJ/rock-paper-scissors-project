@@ -13,11 +13,11 @@ let choices = ['rock', 'paper', 'scissors'];
 // 1/30/23 second step, add event listeners to the three buttons that call playRound with
 // the correct playerSelection every time a button is clicked (keep console.log for this step)
 const selectRock = document.getElementById('rockButton');
-selectRock.addEventListener('click', playRound);
 const selectPaper = document.getElementById('paperButton');
-selectPaper.addEventListener('click', playRound);
 const selectScissors = document.getElementById('scissorsButton');
-selectScissors.addEventListener('click', playRound);
+const rpsButtons = document.getElementsByClassName('btn');
+const buttonChoice = rpsButtons.innerHTML.toLowerCase();
+
 
 function playRound() {
     const playerSelection = getPlayerChoice();
@@ -51,6 +51,18 @@ function validateInput(choice) {
     return choices.includes(choice);
 }
 
+selectRock.addEventListener('click', () => {
+    
+});
+
+selectPaper.addEventListener('click', () => {
+
+});
+
+selectScissors.addEventListener('click', () => {
+
+});
+
 function checkWinner(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
         console.log(`Tie! You both picked ${playerSelection}.`);
@@ -67,12 +79,12 @@ function checkWinner(playerSelection, computerSelection) {
     }
 }
 
-function logRounds() {
-    if (playerScore > compScore) {
-        console.log("You beat the computer in a best of 5!");
-    } else if (playerScore < compScore) {
-        console.log("The computer beat you in a best of 5!");
-    } else {
-        console.log("You tied with the computer in a best of 5!");
-    }
-}
+//function logRounds() {
+//    if (playerScore > compScore) {
+//        console.log("You beat the computer in a best of 5!");
+//    } else if (playerScore < compScore) {
+//        console.log("The computer beat you in a best of 5!");
+//    } else {
+//        console.log("You tied with the computer in a best of 5!");
+//    }
+//}
