@@ -16,8 +16,8 @@ const selectRock = document.getElementById('rockButton');
 const selectPaper = document.getElementById('paperButton');
 const selectScissors = document.getElementById('scissorsButton');
 const rpsButtons = document.getElementsByClassName('btn');
-const buttonChoice = rpsButtons.innerHTML.toLowerCase();
-
+// 2/3/23 Add a div for displaying results and change all of your console.logs into DOM methods
+const outcome = document.getElementById('outcome');
 
 function playRound() {
     const playerSelection = getPlayerChoice();
@@ -51,16 +51,30 @@ function validateInput(choice) {
     return choices.includes(choice);
 }
 
+// 2/3/23 second step, add event listeners to the three buttons that call playRound with
+// the correct playerSelection every time a button is clicked (keep console.log for this step)
 selectRock.addEventListener('click', () => {
-    
+    const playerSelection = 'rock';
+    const computerSelection = getComputerChoice();
+    checkWinner(playerSelection, computerSelection);
+    console.log(`You: ${playerSelection}`);
+    console.log(`PC: ${computerSelection}`);
 });
 
 selectPaper.addEventListener('click', () => {
-
+    const playerSelection = 'paper';
+    const computerSelection = getComputerChoice();
+    checkWinner(playerSelection, computerSelection);
+    console.log(`You: ${playerSelection}`);
+    console.log(`PC: ${computerSelection}`);
 });
 
 selectScissors.addEventListener('click', () => {
-
+    const playerSelection = 'scissors';
+    const computerSelection = getComputerChoice();
+    checkWinner(playerSelection, computerSelection);
+    console.log(`You: ${playerSelection}`);
+    console.log(`PC: ${computerSelection}`);
 });
 
 function checkWinner(playerSelection, computerSelection) {
