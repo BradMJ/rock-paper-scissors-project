@@ -17,7 +17,7 @@ const selectPaper = document.getElementById('paperButton');
 const selectScissors = document.getElementById('scissorsButton');
 const rpsButtons = document.getElementsByClassName('btn');
 // 2/3/23 Add a div for displaying results and change all of your console.logs into DOM methods
-const outcome = document.getElementById('outcome');
+const outcomeDiv = document.getElementById('outcome');
 
 function playRound() {
     const playerSelection = getPlayerChoice();
@@ -57,39 +57,41 @@ selectRock.addEventListener('click', () => {
     const playerSelection = 'rock';
     const computerSelection = getComputerChoice();
     checkWinner(playerSelection, computerSelection);
-    console.log(`You: ${playerSelection}`);
-    console.log(`PC: ${computerSelection}`);
 });
 
 selectPaper.addEventListener('click', () => {
     const playerSelection = 'paper';
     const computerSelection = getComputerChoice();
     checkWinner(playerSelection, computerSelection);
-    console.log(`You: ${playerSelection}`);
-    console.log(`PC: ${computerSelection}`);
 });
 
 selectScissors.addEventListener('click', () => {
     const playerSelection = 'scissors';
     const computerSelection = getComputerChoice();
     checkWinner(playerSelection, computerSelection);
-    console.log(`You: ${playerSelection}`);
-    console.log(`PC: ${computerSelection}`);
 });
 
 function checkWinner(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
-        console.log(`Tie! You both picked ${playerSelection}.`);
+        // 2/11/23 Add outcome paragraph
+        const p = document.getElementById('results');
+        p.innerText = `Tie! You both picked ${playerSelection}.`;
+
     } else if (
     (playerSelection == 'rock' && computerSelection == 'scissors') ||
     (playerSelection == 'paper' && computerSelection == 'rock') ||
     (playerSelection == 'scissors' && computerSelection == 'paper')
     ) {
         playerScore++;
-        console.log("Player wins!");
+        // 2/11/23 Add outcome paragraph
+        const p = document.getElementById('results');
+        p.innerText = `Player wins! Computer picked ${computerSelection}.`;
+
     } else {
         compScore++;
-        console.log("Computer wins!");
+        // 2/11/23 Add outcome paragraph
+        const p = document.getElementById('results');
+        p.innerText = `Computer wins! Computer picked ${computerSelection}.`;
     }
 }
 
