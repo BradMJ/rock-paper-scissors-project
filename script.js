@@ -1,5 +1,7 @@
 let playerScore = 0;
 let compScore = 0;
+// 2/13/23 Add ties variable for tieCount
+let ties = 0;
 
 let choices = ['rock', 'paper', 'scissors'];
 
@@ -22,6 +24,9 @@ const outcomeDiv = document.getElementById('outcome');
 const yourScore = document.querySelector('#yourScore');
 const tieScore = document.querySelector('#tieScore');
 const computerScore = document.querySelector('#computerScore');
+const yourCount = document.querySelector('#yourCount');
+const tieCount = document.querySelector('#tieCount');
+const computerCount = document.querySelector('#computerCount');
 
 function playRound() {
     const playerSelection = getPlayerChoice();
@@ -77,10 +82,13 @@ selectScissors.addEventListener('click', () => {
 
 function checkWinner(playerSelection, computerSelection) {
     if (playerSelection == computerSelection) {
+        // 2/13/23 Add ties variable to keep count
+        ties++;
         // 2/11/23 Add outcome paragraph
         const p = document.getElementById('results');
         p.innerText = `Tie! You both picked ${playerSelection}.`;
-
+        // 2/13/23 Add DOM tieScore count
+        tieCount.innerText = ties;
     } else if (
     (playerSelection == 'rock' && computerSelection == 'scissors') ||
     (playerSelection == 'paper' && computerSelection == 'rock') ||
@@ -90,12 +98,16 @@ function checkWinner(playerSelection, computerSelection) {
         // 2/11/23 Add outcome paragraph
         const p = document.getElementById('results');
         p.innerText = `Player wins! Computer picked ${computerSelection}.`;
+        // 2/13/23 Add DOM yourScore count
+        yourCount.innerText = playerScore;
 
     } else {
         compScore++;
         // 2/11/23 Add outcome paragraph
         const p = document.getElementById('results');
         p.innerText = `Computer wins! Computer picked ${computerSelection}.`;
+        // 2/13/23 Add DOM computerScore count
+        computerCount.innerText = compScore;
     }
 }
 

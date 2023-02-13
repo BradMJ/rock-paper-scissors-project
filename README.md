@@ -9,3 +9,6 @@ Started adding UI 1/30/23
 2/11/23 Added outcome paragraphs  
 2/12/23 Added html box to display scores  
 2/12/23 Added selectors for boxOfScores div  
+2/13/23 Added score counts in html and querySelectors in js  
+2/13/23 Added tie variable in js to display tieCount  
+2/13/23 Added basic css styles to center score counts  

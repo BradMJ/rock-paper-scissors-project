@@ -17,3 +17,8 @@
     display: flex;
     justify-content: space-evenly;
 }
+
+#yourCount, #tieCount, #computerCount {
+    display: flex;
+    justify-content: center;
+}
