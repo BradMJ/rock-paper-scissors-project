@@ -121,6 +121,7 @@ function newLogRounds() {
         boxOfButtons.innerText = `You beat the computer by reaching a score of ${playerScore} first!`;
         p.innerText = null;
     } else if (compScore === 5) {
+        const p = document.getElementById('results');
         boxOfButtons.innerText = `The computer wins by reaching a score of ${compScore} first!`;
         p.innerText = null;
     }
