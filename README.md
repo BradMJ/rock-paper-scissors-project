@@ -12,3 +12,6 @@ Started adding UI 1/30/23
 2/13/23 Added score counts in html and querySelectors in js  
 2/13/23 Added tie variable in js to display tieCount  
 2/13/23 Added basic css styles to center score counts  
+2/13/23 Added querySelector for boxOfButtons div in DOM  
+2/13/23 Announce a winner of the game once one player reaches 5 points with newLogRounds function
+2/13/23 Winner at 5 points is announced in boxOfButtons div therefor removing buttons and limiting max points to 5, while clearing previous rounds winner in #results p  

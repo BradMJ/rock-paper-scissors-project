@@ -14,6 +14,7 @@ let choices = ['rock', 'paper', 'scissors'];
 //}
 // 1/30/23 second step, add event listeners to the three buttons that call playRound with
 // the correct playerSelection every time a button is clicked (keep console.log for this step)
+const boxOfButtons = document.querySelector('#boxOfButtons');
 const selectRock = document.getElementById('rockButton');
 const selectPaper = document.getElementById('paperButton');
 const selectScissors = document.getElementById('scissorsButton');
@@ -108,6 +109,20 @@ function checkWinner(playerSelection, computerSelection) {
         p.innerText = `Computer wins! Computer picked ${computerSelection}.`;
         // 2/13/23 Add DOM computerScore count
         computerCount.innerText = compScore;
+    }
+    // Add newLogRounds function announcing a winner at 5 points
+    newLogRounds();
+}
+
+// 2/13/23 Announce a winner of the game once one player reaches 5 points
+function newLogRounds() {
+    if (playerScore === 5) {
+        const p = document.getElementById('results');
+        boxOfButtons.innerText = `You beat the computer by reaching a score of ${playerScore} first!`;
+        p.innerText = null;
+    } else if (compScore === 5) {
+        boxOfButtons.innerText = `The computer wins by reaching a score of ${compScore} first!`;
+        p.innerText = null;
     }
 }
 
