@@ -1,8 +1,19 @@
-#boxOfButtons {
+#boxOfButtonsAndScore {
     height: 300px;
     width: 400px;
     border: 2px solid black;
     display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#boxOfButtons {
+    display: flex;
     align-items: center;
+    justify-content: space-evenly;
+}
+
+#boxOfScores {
+    display: flex;
     justify-content: space-evenly;
 }

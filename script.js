@@ -18,6 +18,10 @@ const selectScissors = document.getElementById('scissorsButton');
 const rpsButtons = document.getElementsByClassName('btn');
 // 2/3/23 Add a div for displaying results and change all of your console.logs into DOM methods
 const outcomeDiv = document.getElementById('outcome');
+// 2/12/23 Added selectors for boxOfScores div
+const yourScore = document.querySelector('#yourScore');
+const tieScore = document.querySelector('#tieScore');
+const computerScore = document.querySelector('#computerScore');
 
 function playRound() {
     const playerSelection = getPlayerChoice();
