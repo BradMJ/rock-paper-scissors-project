@@ -15,3 +15,4 @@ Started adding UI 1/30/23
 2/13/23 Added querySelector for boxOfButtons div in DOM  
 2/13/23 Announce a winner of the game once one player reaches 5 points with newLogRounds function  
 2/13/23 Winner at 5 points is announced in boxOfButtons div therefor removing buttons and limiting max points to 5, while clearing previous rounds winner in #results p  
+2/16/23 Merged branch into main, having issue with preview loading at https://bradmj.github.io/rock-paper-scissors-project/  
