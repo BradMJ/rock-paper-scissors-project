@@ -3,10 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <title>RPS Project</title>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-
+    <div id="boxOfButtonsAndScore">
+        <div id="boxOfButtons">
+            <div id="rockBox">
+                <button id="rockButton" class="btn">Rock</button>
+            </div>
+            <div id="paperBox">
+                <button id="paperButton" class="btn">Paper</button>
+            </div>
+            <div id="scissorsBox">
+                <button id="scissorsButton" class="btn">Scissors</button>
+            </div>
+        </div>
+        <!--2/12/23 Added box to display scores-->
+        <div id="boxOfScores">
+            <div id="yourScore">
+                <p>Your Score</p>
+                <!--2/13/23 Added p to display playerScore-->
+                <p id="yourCount"></p>
+            </div>
+            <div id="tieScore">
+                <p>Ties</p>
+                <!--2/13/23 Added p to display tieCount-->
+                <p id="tieCount"></p>
+            </div>
+            <div id="computerScore">
+                <p>Computer Score</p>
+                <!--2/13/23 Added p to display computerScore-->
+                <p id="computerCount"></p>
+            </div>
+        </div>
+    </div>
+    <div id="outcome">
+        <p id="results"></p>
+    </div>
 </body>
 </html>
